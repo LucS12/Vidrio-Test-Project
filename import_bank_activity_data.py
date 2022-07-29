@@ -166,4 +166,4 @@ for bankRefID in map_Bank_RefID['Bank Ref ID'].values:
         
         # STEP 27 ...place exception DataFrame to excel in Output subfolder.
         # use output path of STEP 24 to access subfolder:
-        exceptions_df.to_excel(output_path, index=False)
+        exceptions_df.to_excel(output_path+'exceptions.xlsx', index=False)
