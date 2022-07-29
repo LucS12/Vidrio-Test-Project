@@ -5,7 +5,7 @@ import datetime       #Used to get the current date and time
 #STEP 3. Ask user for Bank Activity file location:
 bank_activity_path = input("Provide the absolute path and filename of Bank Activity file: ")
 
-#STEP 4. File paths for Mapping and Bank Activity files:
+#STEP 4. File paths for Mapping file:
 mapping_path = '/Desktop/Test Project[3]/Mapping/Cash_Rec_Mapping.xlsx'    
 
 #STEP 4. Read  Mapping file & Bank Activity file into DataFrames:    
