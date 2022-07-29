@@ -3,14 +3,13 @@ import pandas as pd   #Needed to read in data into DataFrames & manipulate it
 import datetime       #Used to get the current date and time
 
 #STEP 3. Ask user for Bank Activity file location:
-#bank_activity_path = input("Provide the absolute path and filename of Bank Activity file: ")
+bank_activity_path = input("Provide the absolute path and filename of Bank Activity file: ")
 
 #STEP 4. File paths for Mapping and Bank Activity files:
-mapping_path = '/Users/luc.smith/Desktop/Test Project[3]/Mapping/Cash_Rec_Mapping.xlsx'    
-bank_activity_path = '/Users/luc.smith/Desktop/Test Project[3]/Settled Cash Activity Statement - Vidrio_22 Jul 2022.xls'
+mapping_path = '/Desktop/Test Project[3]/Mapping/Cash_Rec_Mapping.xlsx'    
 
 #STEP 4. Read  Mapping file & Bank Activity file into DataFrames:    
-mapping_df = pd.read_excel(mapping_path)            #Mapping DataFrame
+mapping_df = pd.read_excel(mapping_path)                 #Mapping DataFrame
 bank_activity_df = pd.read_excel(bank_activity_path)     #Bank Activity DataFrame
 
 #STEP 5. Replacing any NaNs on Bank Activity DataFrame with blank strings "":
@@ -145,7 +144,7 @@ for bankRefID in map_Bank_RefID['Bank Ref ID'].values:
             
         #STEP 24. Save write_file DF to Output subfolder as excel with file name
         # Bank Reference ID + current date and time + '.xlsx' and 'Bank Transactions' tab:
-        output_path = '/Users/luc.smith/Desktop/Test Project[3]/Output/'
+        output_path = '/Desktop/Test Project[3]/Output/'
         out_filename = str(bankRefID) + date_time_now + '.xlsx'
         
         write_file.to_excel(output_path+out_filename,          #To excel file, no index column
